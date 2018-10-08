@@ -1,0 +1,20 @@
+{ % extends "layout.html" % }
+{ % block content % }
+<div class="jumbotron">
+<h1>{{document.title}}</h1>
+<a href ="{{ url_for('date',d=document['date'])}}"><small class="text-muted">{{ document.date}}</small></a>
+<br>
+<a href ="{{ url_for('tags',tag=document['tag'])}}"><small class="text-muted">{{ document.tag}}</small></a>
+<hr>
+<img src="{{document.image}}">
+<br>
+<br>
+<a href="{{document.url}}">Link</a>
+<br>
+<div id="disqus_threed">
+<noscript>Please enable Javascript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</div>
+</div>
+<script id="dsq-count-scr" src="//blog-flask.disqus.com/count.js" async></script>
+{ % endblock % }
+
